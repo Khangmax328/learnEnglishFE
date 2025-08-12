@@ -4,6 +4,8 @@ import moment from "moment";
 import "moment/locale/vi";
 import axiosClient from "../api/axiosClient";
 import "../styles/home.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function TextDetail() {
   const { id } = useParams();
@@ -72,6 +74,8 @@ export default function TextDetail() {
     (item.user?.id && item.user.id === myId);
 
   return (
+    <>
+    <Navbar />
     <div className="home-wrap">
       <h2 className="home-title">Chi tiết bài viết</h2>
 
@@ -159,5 +163,7 @@ export default function TextDetail() {
         <button className="page-btn" disabled={cmeta.page===cmeta.totalPages} onClick={()=>load(cmeta.page+1)}>›</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
