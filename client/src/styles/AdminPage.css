@@ -1,0 +1,183 @@
+:root{
+  --card:#fff; --line:#e5e7eb; --text:#0f172a; --muted:#6b7280;
+  --primary:#2563eb; --primary-2:#3b82f6; --ok:#16a34a;
+  --danger:#dc2626;
+}
+
+.admin-wrap{ max-width:1100px; margin:22px auto; padding:0 16px; }
+.admin-title{
+  margin:0 0 14px; font-size:26px; font-weight:800; color:var(--text); text-align:left;
+}
+
+.seg{ display:flex; gap:8px; margin:8px 0 14px; }
+.seg-btn{
+  padding:8px 14px; border:1px solid var(--line); border-radius:10px;
+  background:#fff; cursor:pointer; font-weight:700;
+}
+.seg-btn.active{
+  background:linear-gradient(180deg,var(--primary-2),var(--primary));
+  color:#fff; border-color:transparent;
+}
+
+.panel{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 8px 20px rgba(15,23,42,.06);
+  padding:12px;
+}
+.panel-head{
+  display:flex; gap:10px; justify-content:space-between; align-items:center;
+  margin-bottom:10px;
+}
+.ipt{
+  flex:1; min-width:240px;
+  padding:10px 12px; border:1px solid var(--line); border-radius:10px; outline:none;
+}
+
+.btn{
+  border:none; border-radius:10px; padding:9px 12px; font-weight:700; cursor:pointer;
+  background:#fff; border:1px solid var(--line);
+}
+.btn-muted{ background:#f3f4f6; color:#111827; }
+.btn-outline{ background:#fff; }
+.btn-danger{ background:#fee2e2; color:#991b1b; border:1px solid #fecaca; }
+.btn-xs{ padding:4px 8px; border-radius:8px; font-size:12px; }
+
+.tbl{ width:100%; overflow-x:auto; }
+
+.tbl.users .row{
+  display:grid;
+  grid-template-columns: 200px 1fr 160px 110px 240px; 
+  gap:10px; padding:10px 8px; border-top:1px solid var(--line); align-items:center;
+}
+.tbl.users .row.head{
+  font-weight:700; color:#111827; background:#f8fafc; border-radius:8px;
+}
+.tbl.users .col{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.tbl .col-actions{ display:flex; gap:8px; flex-wrap:nowrap; }
+
+.tbl.texts .row{
+  display:grid;
+  grid-template-columns: 180px 1fr 160px 220px; 
+  gap:10px; padding:12px 8px; border-top:1px solid var(--line); align-items:flex-start;
+}
+.tbl.texts .row.head{
+  font-weight:700; color:#111827; background:#f8fafc; border-radius:8px;
+}
+.tbl.texts .col{ overflow:hidden; }
+
+.badge{
+  display:inline-block; padding:4px 8px; border-radius:999px; font-size:12px;
+  background:#e5e7eb; color:#111827; white-space:nowrap;
+}
+.badge.ok{ background:#dcfce7; color:#065f46; }
+.badge.muted{ background:#e5e7eb; color:#111827; }
+
+.text-user{ margin:2px 0 6px; color:#0f172a; }
+.text-ai{
+  color:#065f46; background:#ecfdf5; border:1px solid #a7f3d0;
+  padding:6px 8px; border-radius:10px; display:inline-block;
+}
+.text-ai-vi{ margin-top:4px; }
+
+/* ---------- MINI CONTRIBUTIONS ---------- */
+.mini-contrib{ margin-top:10px; }
+.mini-contrib-title{ font-weight:700; margin-bottom:6px; }
+.mini-contrib-empty{ color:var(--muted); }
+.mini-contrib-item{
+  display:flex; gap:8px; align-items:center; padding:6px 8px;
+  background:#f9fafb; border:1px solid var(--line); border-radius:10px; margin-bottom:6px;
+  flex-wrap:wrap;        
+}
+.mini-contrib-item .mc-user{ font-weight:700; }
+.mini-contrib-item .mc-text{ flex:1 1 180px; }
+.mini-contrib-item .mc-time{ color:var(--muted); font-size:12px; }
+
+.paginate{ display:flex; gap:8px; justify-content:center; margin:14px 0 4px; flex-wrap:wrap; }
+.page-btn{
+  min-width:36px; padding:8px 10px; border:1px solid var(--line); background:#fff; border-radius:10px;
+  cursor:pointer; font-weight:700;
+}
+.page-btn[disabled]{ opacity:.5; cursor:not-allowed; }
+.page-btn.active{ background:var(--primary); color:#fff; border-color:transparent; }
+
+.empty{ padding:16px 8px; color:var(--muted); text-align:center; }
+
+
+@media (max-width:1024px){
+  .admin-wrap{ padding:0 14px; }
+  .panel{ padding:10px; }
+  .btn{ padding:8px 10px; border-radius:8px; font-size:14px; }
+  .tbl.users .row{ grid-template-columns: 180px 1fr 140px 90px 200px; }
+  .tbl.texts .row{ grid-template-columns: 160px 1fr 140px 200px; }
+}
+
+@media (max-width:768px){
+  .admin-wrap{ margin:18px auto; padding:0 12px; }
+  .admin-title{ font-size:22px; }
+  .panel{ padding:10px; border-radius:12px; }
+  .panel-head{ gap:8px; display:grid; grid-template-columns: 1fr auto; }
+  .ipt{ padding:8px 10px; font-size:14px; border-radius:8px; }
+
+  .btn{ padding:7px 10px; font-size:13.5px; border-radius:8px; }
+  .btn-xs{ padding:4px 7px; font-size:12px; }
+
+  .tbl.users .row.head,
+  .tbl.texts .row.head{ display:none; }
+
+  .tbl.users .row{
+    display:block; padding:12px; margin-bottom:10px;
+    border:1px solid var(--line); border-radius:12px; background:#fff;
+  }
+  .tbl.users .col{
+    display:flex; gap:8px; align-items:center;
+    white-space:normal; overflow:visible; text-overflow:initial;
+    margin:4px 0;
+  }
+  .tbl.users .col::before{
+    flex:0 0 92px; color:var(--muted); font-weight:600; /* nhãn chung */
+  }
+  .tbl.users .col-username::before{ content:"Username:"; }
+  .tbl.users .col-email::before{ content:"Email:"; }
+  .tbl.users .col-date::before{ content:"Ngày tạo:"; }
+  .tbl.users .col-badge::before{ content:"Vai trò:"; }
+  .tbl.users .col-actions{ margin-top:6px; flex-wrap:wrap; }
+  .tbl.users .col-actions::before{ content:"Hành động:"; }
+
+  .tbl.texts .row{
+    display:block; padding:12px; margin-bottom:10px;
+    border:1px solid var(--line); border-radius:12px; background:#fff;
+  }
+  .tbl.texts .col{
+    display:block;   
+    margin:8px 0;
+  }
+  .tbl.texts .col::before{
+    display:block; margin-bottom:4px;
+    color:var(--muted); font-weight:600;
+  }
+  .tbl.texts .col-username::before{ content:"Người đăng:"; }
+  .tbl.texts .col-text::before{ content:"Nội dung:"; }
+  .tbl.texts .col-date::before{ content:"Ngày đăng:"; }
+  .tbl.texts .col-actions::before{ content:"Hành động:"; }
+
+  .tbl.texts .col-text .text-user{
+    white-space:pre-wrap; margin:0 0 6px;
+  }
+  .tbl.texts .col-text .text-ai{
+    display:block; margin-top:6px;
+  }
+  .tbl.texts .col-text .mini-contrib{
+    margin-top:8px;
+  }
+
+  .mini-contrib{ width:100%; }
+  .mini-contrib-item{
+    align-items:flex-start; gap:6px; padding:6px; border-radius:10px;
+  }
+  .mini-contrib-item .mc-user{ min-width:72px; }
+  .mini-contrib-item .mc-text{ flex:1 1 auto; }
+  .mini-contrib-item .mc-time{ font-size:11.5px; }
+
+  .tbl.texts .col-actions{ display:flex; gap:8px; flex-wrap:wrap; }
+}
+

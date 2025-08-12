@@ -1,0 +1,107 @@
+.my-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-title {
+  margin-bottom: 12px;
+}
+
+.my-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: box-shadow .15s ease, transform .05s ease;
+}
+.my-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+.my-card:active { transform: scale(.998); }
+
+.my-usertext {
+  font-weight: 700;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.my-ai {
+  color: #065f46;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.my-meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.my-contrib {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.my-contrib-head { font-weight: 600; margin-bottom: 6px; }
+.my-contrib-item { font-size: 14px; margin-bottom: 4px; }
+.my-contrib-item i { color: #6b7280; }
+.my-contrib-empty { color: #6b7280; font-size: 14px; }
+.my-contrib-more { margin-top: 6px; color: #6b7280; font-size: 14px; }
+
+.my-actions { display: flex; gap: 8px; }
+
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary { background: #2563eb !important; color: #fff !important; }
+.btn-danger  { background: #dc2626; color: #fff; }
+.btn:disabled { cursor: not-allowed; opacity: .7; }
+
+.paginate {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.page-btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.page-btn:disabled { background: #f3f4f6; cursor: not-allowed; }
+.page-btn.active { background: #2563eb; color: #fff; }
+
+.my-skeleton { cursor: default; }
+.sk { background: #f1f5f9; border-radius: 6px; }
+.sk-title { height: 12px; width: 180px; margin-bottom: 10px; }
+.sk-row { height: 14px; width: 100%; margin-bottom: 8px; }
+.sk-row.short { width: 90%; }
+
+.contrib-del{
+  margin-left:8px;
+  padding:2px 8px;
+  font-size:12px;
+  line-height:1.2;
+  border:none;
+  border-radius:8px;
+  background:#fee2e2;
+  color:#b91c1c;
+  cursor:pointer;
+}
+.contrib-del:hover{ background:#fecaca; }
+.contrib-del:disabled{ opacity:.6; cursor:not-allowed; }

@@ -1,0 +1,83 @@
+.signup-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .signup-container h2 {
+    font-size: 22px;
+    color: blue;
+    margin-bottom: 25px;
+  }
+  
+  .signup-form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .btn-signup {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-signup:hover {
+    background-color: #357ac8;
+  }
+  
+  .signup-separator {
+    margin: 20px 0;
+    color: #888;
+  }
+  .spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ccc;
+    border-top-color: #e60000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (max-width: 768px) {
+  .signup-container {
+    width: 72%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  .signup-form input {
+    width: 95%;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .btn-signup,
+  .btn-register {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,104 @@
+.login-container {
+  width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  text-align: center;
+  }
+  
+  .login-container h2 {
+    color: blue;
+    margin-bottom: 25px;
+    
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .btn-login {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .login-separator {
+    margin: 10px 0;
+    color: #777;
+  }
+  
+  .btn-register {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ccc;
+    border-top-color: #e60000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      width: 72%;
+      padding: 20px;
+      margin: 20px auto;
+    }
+  
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+  
+    .btn-login,
+    .btn-register {
+      font-size: 14px;
+      padding: 8px;
+    }
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
