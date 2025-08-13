@@ -109,11 +109,36 @@ export default function MyTexts() {
                 <div className="my-usertext">{t.userText}</div>
 
                 {t.correctedText && (
-                  <div className="my-ai">
-                    ✅ AI: {t.correctedText}
-                    {t.correctedTextVi && <div className="ai-vi">🇻🇳 {t.correctedTextVi}</div>}
+                <div className="my-ai">
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                    <div>
+                      ✅ AI: {t.correctedText}
+                      {t.correctedTextVi && (
+                        <div className="ai-vi">🇻🇳 {t.correctedTextVi}</div>
+                      )}
+                    </div>
+                    <button
+                      className="speak-btn"
+                      title="Nghe phát âm"
+                      onClick={(e) => {
+                        e.stopPropagation(); 
+                        const utterance = new SpeechSynthesisUtterance(t.correctedText);
+                        utterance.lang = "en-US";
+                        speechSynthesis.speak(utterance);
+                      }}
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        cursor: "pointer",
+                        fontSize: "18px"
+                      }}
+                    >
+                      🔊
+                    </button>
                   </div>
-                )}
+                </div>
+              )}
+
 
                 <div className="my-meta">
                   {moment(t.createdAt).format("DD/MM/YYYY HH:mm")}

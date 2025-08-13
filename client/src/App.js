@@ -27,13 +27,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
 
         <Route
-          path="/texts/:id"
-          element={
-            <Protected>
-              <TextDetail />
-            </Protected>
-          }
-        />
+  path="/texts/:id"
+  element={<TextDetail />} // ai cũng xem được
+/>
 
         <Route
           path="/my-texts"

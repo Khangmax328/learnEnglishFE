@@ -96,6 +96,7 @@
 }
 
 .input{
+  font-size: 15px;
   flex:1;
   min-width:220px;
   height:44px;                 
@@ -197,6 +198,25 @@
 }
 .contrib-del:hover{ background:#fecaca; }
 .contrib-del:disabled{ opacity:.6; cursor:not-allowed; }
+.speak-btn {
+  background: #e6f7ff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: all 0.2s ease;
+}
+
+.speak-btn:hover {
+  background: #91d5ff;
+}
+
+.speak-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #1890ff;
+}
 
 
 @media (max-width: 768px){

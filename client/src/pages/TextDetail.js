@@ -103,9 +103,28 @@ export default function TextDetail() {
         {item.correctedText && (
           <div className="ai">
             ✅ AI: {item.correctedText}
-            {item.correctedTextVi && <div className="ai-vi">🇻🇳 {item.correctedTextVi}</div>}
+            {item.correctedTextVi && (
+              <div className="ai-vi-wrap">
+                <div className="ai-vi">Dịch: {item.correctedTextVi}</div>
+                <button
+                  className="speak-btn"
+                  onClick={() => {
+                    const utterance = new SpeechSynthesisUtterance(item.correctedText);
+                    utterance.lang = "en-US";
+                    speechSynthesis.speak(utterance);
+                  }}
+                  title="Nghe phát âm"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M3 9v6h4l5 5V4L7 9H3z" />
+                    <path d="M16.5 12c0-1.77-.77-3.29-2-4.29v8.58a5.97 5.97 0 002-4.29z" />
+                  </svg>
+                </button>
+              </div>
+            )}
           </div>
         )}
+
 
         <div className="contrib">
           <b>Góp ý ({cmeta.total}):</b>
